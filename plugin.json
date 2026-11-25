@@ -1,0 +1,28 @@
+{
+  "name": "ashiba-keisan",
+  "displayName": "Ashiba Keisan (足場強度計算)",
+  "version": "1.0.0",
+  "description": "Japanese scaffolding & temporary structure strength calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ) with Python engine and A4 HTML/SVG report generator.",
+  "suggestedPrompts": [
+    "東京都23区内・一般市街地の枠組足場19段（開口部SPL-54あり）の足場計算書を作成して",
+    "単管一側ブラケット足場の建地座屈と壁つなぎを仮設工業会指針で照査して",
+    "Tính toán giàn giáo khung và xuất thuyết minh 足場計算書 chuẩn Nhật Bản"
+  ],
+  "category": "Engineering",
+  "keywords": [
+    "skills",
+    "scaffolding",
+    "ashiba-keisan",
+    "足場計算書",
+    "仮設工業会",
+    "aij",
+    "construction"
+  ],
+  "author": {
+    "name": "RingLord3812",
+    "email": "161222461+RingLord3812@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/RingLord3812/ashiba-keisan",
+  "repository": "https://github.com/RingLord3812/ashiba-keisan",
+  "license": "MIT"
+}

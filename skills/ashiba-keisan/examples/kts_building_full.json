@@ -1,0 +1,194 @@
+{
+  "project": {
+    "name": "（仮称）ＫＴＳビル新築工事",
+    "company": "川田テクノシステム株式会社",
+    "locations": [
+      "建物正面：枠組足場開口部あり",
+      "東面：張出しブラケット足場",
+      "西面：単管一側ブラケット足場"
+    ]
+  },
+  "options": {
+    "strict_aij": false,
+    "deflection_limit": null
+  },
+  "modules": [
+    {
+      "type": "wakugumi",
+      "params": {
+        "building_height_m": 31.200,
+        "scaffold_height_m": 32.600,
+        "bottom_tier_height_m": 2.000,
+        "tiers": 19,
+        "bay_span_m": 1.800,
+        "frame": "TC-917",
+        "ledger": "SYi-518",
+        "brace": "SXB-1618",
+        "joint_pin": "Mジョイント",
+        "arm_lock": "ALB8",
+        "stair": "KS-1718",
+        "stair_tiers": 3,
+        "sheet_name": "メッシュシート",
+        "sheet_unit_weight_kg_m2": 0.460,
+        "live_load_per_layer_kg": 400.0,
+        "live_load_layers": 2,
+        "wall_tie": {
+          "location": "東京都（23区内）",
+          "terrain": "一般市街地",
+          "nearby_highrise": "無し",
+          "wind_scaffold_height_m": 31.000,
+          "scaffold_length_m": 25.000,
+          "eval_height_z_m": 27.5,
+          "eval_height_label": "25-30",
+          "horizontal_spans": 2,
+          "vertical_tiers": 2,
+          "vertical_start_tier": 2,
+          "solidity_phi": 0.70,
+          "position": "B",
+          "wall_tie_material": "壁つなぎ専用金具"
+        },
+        "opening": {
+          "beam_frame": "SPL-54",
+          "open_spans": 3,
+          "open_span_m": 5.400,
+          "install_tier": 3,
+          "install_height_m": 5.400,
+          "live_load_kg": 1000.0
+        },
+        "jack_base": {
+          "material": "BB-35",
+          "extension_mm": 100.0
+        }
+      }
+    },
+    {
+      "type": "tankan_issoku",
+      "params": {
+        "building_height_m": 25.000,
+        "scaffold_height_m": 25.800,
+        "standard_span_m": 1.800,
+        "ledger_spacing_m": 1.700,
+        "bottom_tier_height_m": 2.000,
+        "tiers": 15,
+        "standard_pipe": "単管φ48.6x2.4 (STK500)",
+        "ledger_pipe": "単管φ48.6x2.4 (STK500)",
+        "handrail_pipe": "単管φ48.6x2.3 (STK400)",
+        "brace_pipe": "単管φ48.6x2.4 (STK400)",
+        "plank": "足場板 25x240 (合板)",
+        "bracket": "SBK (300-500)",
+        "bracket_projection_mm": 500.0,
+        "plank_eccentricity_mm": 250.0,
+        "sheet_name": "メッシュシート",
+        "sheet_unit_weight_kg_m2": 0.460,
+        "live_load_per_standard_kg": 100.0,
+        "wall_tie": {
+          "location": "東京都（23区内）",
+          "terrain": "一般市街地",
+          "nearby_highrise": "無し",
+          "wind_scaffold_height_m": 25.000,
+          "scaffold_length_m": 18.500,
+          "eval_height_z_m": 17.5,
+          "eval_height_label": "15-20",
+          "horizontal_spans": 2,
+          "vertical_tiers": 2,
+          "vertical_start_tier": 1,
+          "solidity_phi": 0.70,
+          "position": "B",
+          "wall_tie_material": "壁つなぎ専用金具"
+        }
+      }
+    },
+    {
+      "type": "bracket_support",
+      "params": {
+        "building_height_m": 31.200,
+        "scaffold_height_m": 25.500,
+        "bracket_elevation_m": 5.800,
+        "tiers": 15,
+        "bay_span_m": 1.800,
+        "bracket_span_m": 5.400,
+        "frame": "TC-917",
+        "ledger": "SYi-518",
+        "brace": "SXB-1618",
+        "stair_tiers": 1,
+        "num_girders": 2,
+        "girder_material": "H形鋼 200x200x8x12 (SS400)",
+        "bracket_material": "H形鋼 300x300x10x15 (SS400)",
+        "bracket_geometry": {
+          "length_cm": 150.0,
+          "frame_width_a_cm": 90.0,
+          "wall_clearance_b_cm": 30.0,
+          "frames_per_span": 3,
+          "girders_on_bracket": 2,
+          "Lb_cm": 240.0,
+          "C_ltb": 1.75
+        },
+        "weld": {
+          "flange_length_cm": 28.0,
+          "flange_throat_cm": 1.0,
+          "web_length_cm": 24.0,
+          "web_throat_cm": 1.0
+        },
+        "anchor_bolt": {
+          "size": "M20",
+          "tension_count": 4,
+          "compression_count": 2,
+          "tension_bolt_to_center_cm": 22.5
+        },
+        "concrete": {
+          "grade": "Fc27"
+        },
+        "base_plate": {
+          "width_cm": 50.0,
+          "height_cm": 60.0,
+          "thickness_mm": 25.0,
+          "tension_cantilever_cm": 7.5,
+          "tension_bolt_pitch_cm": 10.0,
+          "compression_cantilever_cm": 15.0
+        }
+      }
+    },
+    {
+      "type": "tsuri_ashiba",
+      "params": {
+        "span_x_m": 6.500,
+        "span_y_m": 5.850,
+        "girder_spacing_m": 1.800,
+        "joist_spacing_m": 1.500,
+        "support_to_plank_center_m": 0.500,
+        "cantilever_length_m": 1.000,
+        "plank": "足場板 25x240 (合板)",
+        "joist": "角パイプ 60x60 (STKR400)",
+        "girder": "角パイプ 60x60 (STKR400)",
+        "chain": "ループ吊り",
+        "net_name": "ラッセルネット",
+        "net_unit_weight_kg_m2": 0.320,
+        "joist_count_per_girder": 4,
+        "worker_weight_kg": 80.0,
+        "worker_count": 2,
+        "bolt_weight_kg": 40.0,
+        "bolt_sets": 2
+      }
+    },
+    {
+      "type": "nitori_koudai",
+      "params": {
+        "permanent_beam_span_m": 6.500,
+        "girder_span_m": 5.850,
+        "girder_spacing_m": 1.800,
+        "joist_spacing_m": 0.900,
+        "platform_area_m2": 16.2,
+        "live_load_t": 5.00,
+        "impact_factor": 1.10,
+        "deck_plank": "足場板 28x240 (合板)",
+        "joist": "角パイプ 60x60 (STKR400)",
+        "girder": "H形鋼 250x250x9x14 (SS400)",
+        "permanent_beam": "ビルトH 1200x800x15x12 (SS400)",
+        "girder_loaded_length_m": 4.500,
+        "joist_count_on_girder": 6,
+        "beam_loaded_length_m": 3.600,
+        "num_girders_on_beam": 3
+      }
+    }
+  ]
+}

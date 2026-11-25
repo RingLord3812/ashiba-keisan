@@ -1,0 +1,40 @@
+{
+  "project": {
+    "name": "（仮称）大阪事務所改修工事 枠組足場",
+    "company": "サンプル建設株式会社",
+    "locations": ["北面：標準枠組足場（開口部なし）"]
+  },
+  "modules": [
+    {
+      "type": "wakugumi",
+      "params": {
+        "building_height_m": 18.000,
+        "scaffold_height_m": 19.000,
+        "bottom_tier_height_m": 2.000,
+        "tiers": 11,
+        "bay_span_m": 1.800,
+        "frame": "TC-917",
+        "ledger": "SYi-518",
+        "brace": "SXB-1618",
+        "stair_tiers": 2,
+        "wall_tie": {
+          "location": "大阪府",
+          "terrain": "一般市街地",
+          "nearby_highrise": "無し",
+          "wind_scaffold_height_m": 19.000,
+          "scaffold_length_m": 21.600,
+          "eval_height_z_m": 18.0,
+          "horizontal_spans": 2,
+          "vertical_tiers": 2,
+          "vertical_start_tier": 2,
+          "solidity_phi": 0.70,
+          "position": "B"
+        },
+        "jack_base": {
+          "material": "BB-35",
+          "extension_mm": 150.0
+        }
+      }
+    }
+  ]
+}

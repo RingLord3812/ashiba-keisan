@@ -1,0 +1,25 @@
+{
+  "name": "ashiba-keisan",
+  "description": "Japanese scaffolding & temporary structure strength calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ): frame, single-pipe bracket, cantilever support bracket, suspended steel, and material loading platform with SVG/HTML/MD calculation sheet generation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "RingLord3812",
+    "email": "161222461+RingLord3812@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/RingLord3812/ashiba-keisan",
+  "repository": "https://github.com/RingLord3812/ashiba-keisan",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "scaffolding",
+    "ashiba",
+    "足場計算",
+    "枠組足場",
+    "単管足場",
+    "仮設工業会",
+    "structural-engineering",
+    "construction",
+    "aij",
+    "succes"
+  ]
+}

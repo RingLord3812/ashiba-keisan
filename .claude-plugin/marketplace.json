@@ -1,0 +1,20 @@
+{
+  "name": "ashiba-keisan",
+  "description": "Japanese scaffolding structural calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ) for Claude Code and cross-platform AI agents.",
+  "owner": {
+    "name": "RingLord3812",
+    "email": "161222461+RingLord3812@users.noreply.github.com"
+  },
+  "plugins": [
+    {
+      "name": "ashiba-keisan",
+      "description": "Japanese scaffolding & temporary structure strength calculation skill (足場計算書): 枠組足場, 単管一側ブラケット足場, 足場受ブラケット, 鉄骨吊り足場, 荷取り構台.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "RingLord3812",
+        "email": "161222461+RingLord3812@users.noreply.github.com"
+      }
+    }
+  ]
+}

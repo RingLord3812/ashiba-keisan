@@ -1,0 +1,42 @@
+{
+  "name": "ashiba-keisan",
+  "version": "1.0.0",
+  "description": "Japanese scaffolding & temporary structure strength calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ).",
+  "author": {
+    "name": "RingLord3812",
+    "email": "161222461+RingLord3812@users.noreply.github.com",
+    "url": "https://github.com/RingLord3812"
+  },
+  "homepage": "https://github.com/RingLord3812/ashiba-keisan",
+  "repository": "https://github.com/RingLord3812/ashiba-keisan",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "scaffolding",
+    "ashiba-keisan",
+    "足場計算書",
+    "仮設工業会",
+    "aij",
+    "construction"
+  ],
+  "skills": "./skills/",
+  "hooks": {},
+  "interface": {
+    "displayName": "Ashiba Keisan (足場強度計算)",
+    "shortDescription": "Japanese scaffolding structural strength calculation & A4 calculation sheet generator",
+    "longDescription": "Performs Japanese scaffolding & temporary structure calculations (枠組足場, 単管一側ブラケット足場, 足場受ブラケット, 鉄骨吊り足場, 荷取り構台) verified against SUCCES Ver 4.11, 仮設工業会 wind guidelines, and AIJ steel standards.",
+    "developerName": "RingLord3812",
+    "category": "Engineering",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "東京都23区内の枠組足場（開口部あり）の足場計算書を作成して",
+      "足場受ブラケットの溶接・アンカーボルト・ベースプレートを照査して"
+    ],
+    "websiteURL": "https://github.com/RingLord3812/ashiba-keisan",
+    "brandColor": "#0369A1"
+  }
+}

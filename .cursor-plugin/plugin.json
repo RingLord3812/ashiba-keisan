@@ -1,0 +1,22 @@
+{
+  "name": "ashiba-keisan",
+  "displayName": "Ashiba Keisan (足場強度計算)",
+  "description": "Japanese scaffolding & temporary structure strength calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ).",
+  "version": "1.0.0",
+  "author": {
+    "name": "RingLord3812",
+    "email": "161222461+RingLord3812@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/RingLord3812/ashiba-keisan",
+  "repository": "https://github.com/RingLord3812/ashiba-keisan",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "scaffolding",
+    "ashiba-keisan",
+    "足場計算書",
+    "仮設工業会",
+    "aij"
+  ],
+  "skills": "./skills/"
+}

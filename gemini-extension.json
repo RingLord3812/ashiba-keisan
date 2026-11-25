@@ -1,0 +1,6 @@
+{
+  "name": "ashiba-keisan",
+  "description": "Japanese scaffolding & temporary structure strength calculation skill (SUCCES Ver 4.11 / 仮設工業会 / AIJ).",
+  "version": "1.0.0",
+  "contextFileName": "GEMINI.md"
+}

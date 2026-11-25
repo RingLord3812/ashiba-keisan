@@ -1,0 +1,11 @@
+---
+description: Japanese scaffolding & temporary structure strength calculation skill (足場計算書, SUCCES Ver 4.11, 仮設工業会, AIJ)
+globs:
+alwaysApply: false
+---
+
+When working on scaffolding or temporary structure calculations (`枠組足場`, `単管一側ブラケット足場`, `足場受ブラケット`, `鉄骨吊り足場`, `荷取り構台`, `壁つなぎ`, anchor bolts, welds, or base plates):
+
+1. Read `skills/ashiba-keisan/SKILL.md` and the relevant manual under `skills/ashiba-keisan/references/`.
+2. Execute `python skills/ashiba-keisan/scripts/calculate.py` rather than hand-estimating stresses or wind loads.
+3. Verify changes with `python -m unittest discover -s skills/ashiba-keisan/tests -v`.

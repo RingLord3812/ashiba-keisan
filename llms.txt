@@ -1,0 +1,26 @@
+# ashiba-keisan (足場強度計算スキル)
+
+> Universal AI Agent Skill and Python structural calculation engine for Japanese scaffolding and temporary structures (SUCCES Ver 4.11 / 仮設工業会 / AIJ).
+> Supports Frame Scaffolding (枠組足場), Single-Pipe One-Sided Bracket Scaffolding (単管一側ブラケット足場), Scaffold Support Cantilever Brackets (足場受ブラケット), Steel-Frame Suspended Scaffolding (鉄骨吊り足場), and Material Loading Platforms (荷取り構台).
+
+## Core Skill & Web Prompt
+- [SKILL.md](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/SKILL.md): Concise agent workflow, CLI usage, and forbidden-error checklist.
+- [Standalone Web-Chat Prompt Bundle](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/dist/ashiba-keisan-web-prompt.md): Single-file knowledge pack for ChatGPT, Claude.ai, Gemini Gems, and NotebookLM.
+- [AGENTS.md](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/AGENTS.md): Universal repository instructions for coding agents.
+
+## Technical Reference Manuals (Japanese)
+- [Wind Load & Wall Ties (仮設工業会)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/wind_load.md)
+- [Frame Scaffolding (枠組足場)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/wakugumi_ashiba.md)
+- [Single-Pipe Bracket Scaffolding (単管一側ブラケット足場)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/tankan_issoku.md)
+- [Scaffold Support Cantilever Bracket (足場受ブラケット)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/ashiba_uke_bracket.md)
+- [Steel-Frame Suspended Scaffolding (鉄骨吊り足場)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/tekkotsu_tsuri.md)
+- [Material Loading Platform (荷取り構台)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/references/nitori_koudai.md)
+
+## Standard Lookup Data (JSON)
+- [Wind Tables (47 Prefectures, Terrain I-V, Gust S)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/data/wind_tables.json)
+- [JIS & Scaffolding Materials Catalog](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/data/materials.json)
+
+## Executable Engine & Examples
+- [CLI Entrypoint (calculate.py)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/scripts/calculate.py)
+- [Full 5-Module Benchmark Input (KTS Building)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/examples/kts_building_full.json)
+- [Generated Sample Report (Markdown)](https://raw.githubusercontent.com/RingLord3812/ashiba-keisan/main/skills/ashiba-keisan/examples/kts_building_report.md)

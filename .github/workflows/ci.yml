@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.10", "3.12", "3.13"]
+        exclude:
+          - os: macos-latest
+            python-version: "3.10"
+          - os: windows-latest
+            python-version: "3.12"
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run 31-page SUCCES benchmark and edge-case tests
+        run: python -m unittest discover -s skills/ashiba-keisan/tests -v
+
+      - name: Smoke-test CLI commands
+        run: |
+          python skills/ashiba-keisan/scripts/calculate.py catalog
+          python skills/ashiba-keisan/scripts/calculate.py lookup-wind --location "東京都（23区内）" --terrain 一般市街地 --z 27.5 --height 31 --length 25 --phi 0.7 --position B --tie-h 3.6 --tie-v 3.4
+          python skills/ashiba-keisan/scripts/calculate.py check-connection --moment 417930 --shear 5572.4 --bolt M20 --nt 4 --nc 2
+
+      - name: Verify Web-Chat bundle and llms.txt are up to date
+        run: python scripts/build_web_bundle.py --check
+
+      - name: Validate JSON manifests and data catalogs
+        run: |
+          python -c "
+          import json, pathlib
+          files = [
+            '.claude-plugin/plugin.json',
+            '.claude-plugin/marketplace.json',
+            '.antigravity-plugin/plugin.json',
+            '.codex-plugin/plugin.json',
+            '.cursor-plugin/plugin.json',
+            'plugin.json',
+            'gemini-extension.json',
+            'skills/ashiba-keisan/data/wind_tables.json',
+            'skills/ashiba-keisan/data/materials.json',
+            'skills/ashiba-keisan/examples/kts_building_full.json',
+            'skills/ashiba-keisan/examples/wakugumi_only.json',
+          ]
+          for f in files:
+            json.loads(pathlib.Path(f).read_text(encoding='utf-8'))
+            print('Valid JSON:', f)
+          "
+
+      - name: Check bash installer syntax (Unix)
+        if: runner.os != 'Windows'
+        run: bash -n install.sh
