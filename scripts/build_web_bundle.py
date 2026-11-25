@@ -138,6 +138,12 @@ def build_llms_txt() -> str:
 
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8", errors="replace")
+            except Exception:
+                pass
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="Fail if generated files differ from disk.")
     args = parser.parse_args()

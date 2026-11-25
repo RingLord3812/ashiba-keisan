@@ -195,6 +195,14 @@ def _cmd_check_connection(args: argparse.Namespace) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Windows の非UTF-8コンソール (cp1252/cp932等) での日本語出力文字化け・例外を防止
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8", errors="replace")
+            except Exception:
+                pass
+
     parser = argparse.ArgumentParser(description="足場強度計算システム CLI (SUCCES Ver 4.11 / 仮設工業会 / AIJ 準拠)")
     sub = parser.add_subparsers(dest="command", required=True)
 
