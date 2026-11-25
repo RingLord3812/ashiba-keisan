@@ -73,6 +73,7 @@ try {
         if (Test-Path $Dest) { Remove-Item -Recurse -Force $Dest }
         robocopy $SourceDir $Dest /E /XD __pycache__ .pytest_cache /XF *.pyc | Out-Null
         if ($LASTEXITCODE -ge 8) { throw "Failed to copy skill to $Dest (robocopy exit $LASTEXITCODE)" }
+        $global:LASTEXITCODE = 0
         Write-Host "[OK] Installed ($t) -> $Dest"
     }
 
